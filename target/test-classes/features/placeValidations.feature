@@ -1,6 +1,6 @@
 Feature: Validating Place API's
 
-  @AddPlace
+  @AddPlace @Regression
   Scenario Outline: Verify if place is being successfully added using AddPlace API
     Given  Add place Payload with "<name>" "<address>" "<language>" "<phoneNumber>"
     When  user calls "AddPlaceAPI" with "Post" http request
@@ -14,7 +14,7 @@ Feature: Validating Place API's
       | Frontline house      | 29, side layout, cohen 09   | French-IN | +33 07780133042 |
       #| Bhakti Vedanta Manor | 25, Dharma Marg,Wartford,UK | English   | +44 07780145674 |
 
-    @DeletePlace
+    @DeletePlace @Regression
     Scenario: Verify if Delete Place functionlaity is working fine or not
       Given DeletePlace Payload
       When  user calls "deletePlaceAPI" with "Post" http request
